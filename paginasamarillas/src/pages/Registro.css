@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*NO SE GENERARA COMENTARIADO DE LOS ESTILOS CSS YA QUE SE SOBRE ENTIENDE PARA QUE ES CADA ELEMENTO QUE ESTA HACIENDO */
+/*LA MAYORIA DE LOS ESTILO SON MUY SIMILARES Y SOLO VARIAN EN CUANTO AL TITULO Y UNO QUE OTRO ELEMENTO PERO LOS DEJO ASI 
+SEPARADOS YA QUE PASA ALGO EXTRANO Y LOS ESTILOS CON EL MISMO TITULO CAMBIAN EN LAS OTRAS PAGINAS SI TIENEN EL MISMO TITULO
+AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O QUE ES*/
+
+.titulo {
+  padding: 20px 30px;
+  font-family: "Roboto";
+  font-size: 3em;
+  text-align: center;
+}
+
+.subtitulo-registro {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 1.5em;
+}
+
+.fondo-registro {
+  background-color: #ffffff;
+  height: 150vh;
+}
+
+.centro-registro {
+  height: 100vh;
+  width: 80%;
+  border: 1px solid #000000;
+  margin-left: 10%;
+  margin-top: 5%;
+  border-radius: 8px;
+}
+
+.formulario-registro {
+  margin-top: 4%;
+  padding: 50px;
+  height: 15vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.cuadro-correo{
+  width: 150%;
+  margin-left: 30%;
+}
+
+.formulario-registro input {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  font-size: 15px;
+}
+
+.formulario-registro input:focus {
+  outline: none;
+  border-color: #66ccff;
+}
+
+.formulario-registro button {
+  margin-left: 38%;
+  margin-top: 20px;
+  grid-column: span 2;
+  padding: 15px;
+  background: #66ccff;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 20%;
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/*NO SE GENERARA COMENTARIADO DE LOS ESTILOS CSS YA QUE SE SOBRE ENTIENDE PARA QUE ES CADA ELEMENTO QUE ESTA HACIENDO */
+/*LA MAYORIA DE LOS ESTILO SON MUY SIMILARES Y SOLO VARIAN EN CUANTO AL TITULO Y UNO QUE OTRO ELEMENTO PERO LOS DEJO ASI 
+SEPARADOS YA QUE PASA ALGO EXTRANO Y LOS ESTILOS CON EL MISMO TITULO CAMBIAN EN LAS OTRAS PAGINAS SI TIENEN EL MISMO TITULO
+AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O QUE ES*/
+
+.header-title {
+  margin-top: 0px;
+  text-align: left;
+  font-size: 28px;
+  font-family: "Roboto";
+  color: #000;
+  background-color: #3498db;
+  width: 20%;
+}
+
+.header {
+  width: 100%;
+  background-color:#f1c40f;
+  padding: 20px 40px;
+}
+
+.caja-menu {
+  display: flex;
+  margin-right: 40px;
+  justify-content: right;
+  align-items: center;
+
+}
+
+.caja-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.caja-menu li{
+  display: flex;
+}
+  
+.caja-menu a {
+  background-color: #66ccff;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid #000;
+  transition: all 0.2s ease-in-out;
+  font-family: "Nunito";
+  min-width: 130px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja-menu a:hover {
+  background-color: #3498db;
+  color: #ffffff;
+  border-color: #3498db;
+}

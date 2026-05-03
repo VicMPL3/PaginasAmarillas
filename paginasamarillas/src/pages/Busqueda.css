@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*NO SE GENERARA COMENTARIADO DE LOS ESTILOS CSS YA QUE SE SOBRE ENTIENDE PARA QUE ES CADA ELEMENTO QUE ESTA HACIENDO */
+/*LA MAYORIA DE LOS ESTILO SON MUY SIMILARES Y SOLO VARIAN EN CUANTO AL TITULO Y UNO QUE OTRO ELEMENTO PERO LOS DEJO ASI 
+SEPARADOS YA QUE PASA ALGO EXTRANO Y LOS ESTILOS CON EL MISMO TITULO CAMBIAN EN LAS OTRAS PAGINAS SI TIENEN EL MISMO TITULO
+AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O QUE ES*/
+
+
+.titulo {
+  padding: 20px 30px;
+  font-family: "Roboto";
+  font-size: 3em;
+  text-align: center;
+}
+
+.subtitulo-busqueda {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+
+.busqueda {
+  padding: 10px;
+  font-family: "Nunito";
+}
+
+.busqueda p {
+
+   text-align: center;
+   margin-top: 15px;
+}
+
+.cuadro-busqueda {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  height: 100px;
+}
+
+.ingreso {
+  padding: 10px;
+  width: 50%;
+}
+
+.fondo{
+  background-color: rgb(255, 255, 255); 
+  padding-bottom: 10vh ;
+}
+
+.centro {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+} 
+
+.categorias {
+  margin-left: 10%;
+}
+
+.categorias h2 {
+  text-align: center;
+  padding: 15px;
+}
+
+.contenedor-cat {
+  border: 1px solid gray;
+  padding: 10px 20px 5px 20px;
+  width: 200px;
+
+}
+
+.departamentos {
+  margin-right: 10%;
+}
+
+.departamentos h2 {
+  text-align: center;
+  padding: 15px;
+}
+
+.contenedor-dep {
+border: 1px solid gray;
+padding: 15px;
+width: 250px;
+}

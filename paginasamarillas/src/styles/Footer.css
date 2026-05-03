@@ -1,0 +1,31 @@
+
+/*NO SE GENERARA COMENTARIADO DE LOS ESTILOS CSS YA QUE SE SOBRE ENTIENDE PARA QUE ES CADA ELEMENTO QUE ESTA HACIENDO */
+/*LA MAYORIA DE LOS ESTILO SON MUY SIMILARES Y SOLO VARIAN EN CUANTO AL TITULO Y UNO QUE OTRO ELEMENTO PERO LOS DEJO ASI 
+SEPARADOS YA QUE PASA ALGO EXTRANO Y LOS ESTILOS CON EL MISMO TITULO CAMBIAN EN LAS OTRAS PAGINAS SI TIENEN EL MISMO TITULO
+AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O QUE ES*/
+
+
+.footer {
+  background: #f1c40f;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 18px;
+  font-weight: bold;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15vw;
+}
+
+.footer a {
+  cursor: pointer;
+  color: #000;
+
+}
+
+.footer a:hover {
+  text-decoration: none ;
+}

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*NO SE GENERARA COMENTARIADO DE LOS ESTILOS CSS YA QUE SE SOBRE ENTIENDE PARA QUE ES CADA ELEMENTO QUE ESTA HACIENDO */
+/*LA MAYORIA DE LOS ESTILO SON MUY SIMILARES Y SOLO VARIAN EN CUANTO AL TITULO Y UNO QUE OTRO ELEMENTO PERO LOS DEJO ASI 
+SEPARADOS YA QUE PASA ALGO EXTRANO Y LOS ESTILOS CON EL MISMO TITULO CAMBIAN EN LAS OTRAS PAGINAS SI TIENEN EL MISMO TITULO
+AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O QUE ES*/
+
+.titulo {
+  padding: 20px 30px;
+  font-family: "Roboto";
+  font-size: 3em;
+  text-align: center;
+}
+
+.fondo-nosotros {
+  background-color: #ffffff;
+  height: 170vh;
+}
+
+.quienes-somos div {
+  border-radius: 8px;
+  border: 1px, solid, black;
+  height: 30vh;
+  width: 80%;
+  margin-left: 10%;
+  white-space: pre-wrap;
+  padding: 40px 40px;
+  font-family: "Nunito";
+  font-size: 1.4em;
+}
+
+.quienes-somos h2 {
+  margin-top: 3%;
+  margin-left: 12%;
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  font-family: "Roboto";
+}
+
+.preguntas h2 {
+  margin-top: 3%;
+  margin-left: 12%;
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  font-family: "Roboto";
+}
+
+.preguntas div {
+  border-radius: 8px;
+  border: 1px, solid, black;
+  height: 40vh;
+  width: 80%;
+  margin-left: 10%;
+  white-space: pre-wrap;
+  padding: 20px 40px;
+  font-family: "Nunito";
+  font-size: 1.4em;
+}
+
+.lista {
+  columns: 2;
+  gap: 70px;
+  padding-left: 15%;
+  margin-top: 3%;
+}
+
+.lista li {
+  text-decoration: none;
+  margin-bottom: 5%;
+}
+
+.lista a {
+  color: black;
+  text-decoration: none;
+}
+
+.redes h2 {
+  margin-top: 3%;
+  margin-left: 12%;
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  font-family: "Roboto";
+}
+
+.caja-redes {
+  height: 150px;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  border-radius: 8px;
+  border: 1px, solid, black;
+  padding-left: 5%;
+}
+
+.caja-redes a{
+  columns: 4;
+  flex: 1;
+  text-align: center;
+  padding: 40px, 30px;
+  width:200px ;
+  margin: 25px 20px;
+
+}
+
+.caja-redes a img{
+  width: 100px;
+  height: 100px;
+}
+
+
