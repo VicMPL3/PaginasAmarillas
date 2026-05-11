@@ -15,13 +15,15 @@ export default function Ingreso() {
   /*Agarra los elementos ingresados en el formulario y verifica que existan datos que enviar */
 
   const handleLogin = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     {/*En este apartado del try se esta generando un intento de acceder los datos en la base de datos, por tanto
       se genera un if para leer la respuesta del servidor ya que es un GET y si los datos son encontrado en la base de datos se usa el
       navigate para enlazar a la nueva pestaña en la cual se esta estudiando el encapsulamiento para documentos que necesitan loggeo
       */}
     try {
       const res = await api.login(email, password);
+
+      localStorage.setItem("usuario", JSON.stringify(res.user || res.usuario));
 
       if (res.success == 1 || res.success === true) {
         alert(res.message);

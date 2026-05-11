@@ -1,15 +1,63 @@
-export default function Inicio() {
+import React, { useEffect, useState } from "react";
+import api from "../api/api"; // Ajusta la ruta de tu archivo API.js
+import "./Inicio.css";
+ 
+
+const Inicio = () => {
+  const [anuncios, setAnuncios] = useState([]);
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    const cargarAnuncios = async () => {
+      try {
+        const data = await api.getAds(); // Llama a tu método getAds
+        setAnuncios(data);
+      } catch (error) {
+        console.error("Error al obtener anuncios:", error);
+      } finally {
+        setCargando(false);
+      }
+    };
+
+    cargarAnuncios();
+  }, []);
+
+  if (cargando) return <p>Cargando anuncios...</p>;
+
   return (
-    /*Se genera un apartado general llamado fondo para darle estructura al documento */
-    <div className="fondo">
-      <h1 className="titulo">Inicio</h1>
-
-      {/*ACTUALMENTE ESTA PAGINA SE ENCUENTRA VACIA YA QUE SE BUSCA ENLAZAR SU CONTENDIO CON CONTENDIO RESPONSIVE GENERADO POR OTRA PAGINA
-      PERO ACTUALMENTE NO POSEE LA CAPACIDAD DE GENERAR DICHA ESTRUCTURA DE CODIGO PERO SERA GENERADA EN FUTURO */}
-
-      <div style={{ margin: "50px", textAlign: "center", fontSize: "50px" }}>
-        PAGINA EN CONSTRUCCION.....
-      </div>
+    <div className="contenedor_anuncios">
+      <h1 className="titulo">Anuncios Recientes</h1>
+      {anuncios.length === 0 ? (
+        <p>No hay anuncios disponibles por ahora.</p>
+      ) : (
+        <div className="grid-anuncios">
+          {anuncios.slice(0, 7).map(
+            (
+              anuncio, // .slice limita a los primeros 6 elementos
+            ) => (
+              <div key={anuncio.id} className="tarjeta-anuncio">
+                <div className="contenedor-imagen">
+                  {anuncio.imagen_url ? (
+                    <img
+                      src={`http://localhost/paginasamarillas/uploads/${anuncio.imagen_url}`}
+                      alt={anuncio.titulo}
+                    />
+                  ) : (
+                    <div className="sin-foto">Sin imagen</div>
+                  )}
+                </div>
+                <div className="info-anuncio">
+                  <h3>{anuncio.titulo}</h3>
+                  <span className="etiqueta-tipo">{anuncio.tipo}</span>
+                  <p>{anuncio.descripcion}</p>
+                </div>
+              </div>
+            ),
+          )}
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default Inicio;
