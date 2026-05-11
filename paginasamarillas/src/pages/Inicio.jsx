@@ -39,7 +39,7 @@ const Inicio = () => {
                 <div className="contenedor-imagen">
                   {anuncio.imagen_url ? (
                     <img
-                      src={`http://localhost/paginasamarillas/uploads/${anuncio.imagen_url}`}
+                      src={`${process.env.REACT_APP_SITE_URL}/uploads/${anuncio.imagen_url}`}
                       alt={anuncio.titulo}
                     />
                   ) : (
