@@ -1,6 +1,10 @@
-const API_URL = process.env.NODE_ENV === 'production'
+const IS_PROD = process.env.NODE_ENV === 'production';
+
+const API_URL = IS_PROD
   ? "https://paginasamarillas.gt.tc/api/" // Producción
   : "http://localhost/paginasamarillas/api/"; // Desarrollo local
+
+export const SITE_URL = API_URL.replace('/api/', '');
 
 /*En esta api se estan realizando dos operaciones necesarias para el correcto funcionamiento de la pagina las cuales 
 son el login y registro de usuario, estos funcionan de la siguiente manera */

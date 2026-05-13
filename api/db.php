@@ -1,12 +1,22 @@
 <?php
-//conexion con la base de datos que actualmente esta en localhost
-$host = "localhost";
-$db   = "paginasamarillas";
-$user = "root";
-$pass = "";
-$charset = "utf8mb4";
+//conexion con la base de datos para que ella misma detecte si esta en local o en produccion
+$isLocal = ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['REMOTE_ADDR'] === '127.0.0.1');
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+if ($isLocal) {
+    $host = 'localhost';
+    $db   = 'paginasamarillas';
+    $user = 'root';
+    $pass = '';
+
+} else {
+    // Configuración de PRODUCCIÓN (Suele fallar aquí)
+    $host = 'sql205.infinityfree.com'; 
+    $db   = 'if0_41821150_paginasamarillas';
+    $user = 'if0_41821150';
+    $pass = 'bCfxOAhuPEOS1Ga';
+}
+
+$dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

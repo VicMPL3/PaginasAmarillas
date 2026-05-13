@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import api from "../api/api"; // Ajusta la ruta de tu archivo API.js
+import api, { SITE_URL } from "../api/api";
 import "./Inicio.css";
- 
 
 const Inicio = () => {
   const [anuncios, setAnuncios] = useState([]);
@@ -26,7 +25,7 @@ const Inicio = () => {
 
   return (
     <div className="contenedor_anuncios">
-      <h1 className="titulo">Anuncios Recientes</h1>
+      <h1 className="titulo_home">Anuncios Recientes</h1>
       {anuncios.length === 0 ? (
         <p>No hay anuncios disponibles por ahora.</p>
       ) : (
@@ -39,7 +38,7 @@ const Inicio = () => {
                 <div className="contenedor-imagen">
                   {anuncio.imagen_url ? (
                     <img
-                      src={`${process.env.REACT_APP_SITE_URL}/uploads/${anuncio.imagen_url}`}
+                      src={`${SITE_URL}/uploads/${anuncio.imagen_url}`}
                       alt={anuncio.titulo}
                     />
                   ) : (
