@@ -38,7 +38,7 @@ export default function Ingreso() {
 
   return (
     <div className="fondo-sesion">
-      <h1 className="titulo">Inicio de sesión</h1>
+      <h1 className="titulo_inicio">Inicio de sesión</h1>
       <p className="subtitulo-sesion">
         Para acceder, ingrese sus datos registrados
       </p>

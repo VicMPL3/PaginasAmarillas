@@ -53,10 +53,24 @@ $stmt->execute([
     ":correo" => $correo
 ]);
 
-// En desarrollo mostramos el link
+$isLocal = ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['REMOTE_ADDR'] === '127.0.0.1');
+
+if ($isLocal) {
+    $frontend_url = "http://localhost:3000";
+} else {
+
+    $frontend_url = "https://paginasamarillas.gt.tc";
+}
+
+
+$reset_link = "$frontend_url/reset-password?token=$token";
+
+// 3. Enviar respuesta
 echo json_encode([
     "success" => 1,
     "message" => "Link de recuperación generado",
-    "reset_link" => "http://localhost:3000/reset-password?token=$token"
+    "reset_link" => $reset_link
 ]);
 exit;
+
+

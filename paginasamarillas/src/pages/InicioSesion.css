@@ -7,11 +7,12 @@ SEPARADOS YA QUE PASA ALGO EXTRANO Y LOS ESTILOS CON EL MISMO TITULO CAMBIAN EN 
 AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O QUE ES*/
 
 
-.titulo h1{
+.titulo_inicio {
   padding: 20px 30px;
   font-family: "Roboto";
-  font-size: 10em;
+  font-size: 3em;
   text-align: center;
+  
 
 }
 
