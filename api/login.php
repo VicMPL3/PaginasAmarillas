@@ -27,6 +27,7 @@ maximo de busqueda de 1 para evitar que la base de datos se quede buscando indef
 $correo = $data["correo"];
 $password = $data["password"];
 
+
 $stmt = $pdo->prepare(
     "SELECT id, correo, password 
      FROM usuarios 
@@ -53,7 +54,7 @@ if (!password_verify($password, $user["password"])) {
 //Si los datos ingresados son correctos, se genera un codigo 1 que arroja en el apartado de login.jsx el acceso a otra seccion de la pagina
 echo json_encode([
     "success" => 1,
-    "message" => "Datos correctos",
+    // "message" => "Datos correctos", //Se desactiva para que deje de mostar el popout molesto
     "user" => [
         "id" => $user["id"],
         "email" => $user["correo"]

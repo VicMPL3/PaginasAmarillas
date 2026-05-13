@@ -20,7 +20,8 @@ AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O 
 .header {
   width: 100%;
   background-color:#f1c40f;
-  padding: 20px 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .caja-menu {
@@ -34,9 +35,11 @@ AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O 
 .caja-menu ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
   padding: 0px;
   margin: 0px;
+  justify-content: center;
 }
 
 .caja-menu li{
@@ -53,9 +56,9 @@ AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O 
   border: 1px solid #000;
   transition: all 0.2s ease-in-out;
   font-family: "Nunito";
-  min-width: 130px;
+  min-width: 110px;
   text-align: center;
-  height: 50px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,4 +68,32 @@ AUNQUE NO ESTEN LINKADAS CON EL CSS Y NO SE SI SE DEBA A LA ACCION DEL ROUTER O 
   background-color: #3498db;
   color: #ffffff;
   border-color: #3498db;
+}
+
+@media (max-widht: 768px){
+  .header {
+    padding: 15px 10px;
+    position: relative; /* Evita movimientos extraños */
+  }
+
+  .caja-menu {
+    margin-right: 0; /* Eliminamos el margen derecho que tenías */
+    justify-content: center;
+  }
+
+  .caja-menu ul {
+    flex-direction: column; /* Los botones se ponen uno debajo del otro */
+    width: 100%;
+    gap: 10px;
+  }
+
+  .caja-menu li {
+    width: 100%; /* El item de la lista ocupa todo el ancho */
+    justify-content: center;
+  }
+
+  .caja-menu a {
+    width: 80%; /* El botón ocupa el 80% de la pantalla del móvil */
+    min-width: unset; /* Quitamos el ancho mínimo fijo */
+  }
 }

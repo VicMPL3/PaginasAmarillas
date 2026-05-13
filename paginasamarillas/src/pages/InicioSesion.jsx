@@ -15,21 +15,17 @@ export default function Ingreso() {
   /*Agarra los elementos ingresados en el formulario y verifica que existan datos que enviar */
 
   const handleLogin = async (e) => {
-    e.preventDefault(); 
-    {/*En este apartado del try se esta generando un intento de acceder los datos en la base de datos, por tanto
-      se genera un if para leer la respuesta del servidor ya que es un GET y si los datos son encontrado en la base de datos se usa el
-      navigate para enlazar a la nueva pestaña en la cual se esta estudiando el encapsulamiento para documentos que necesitan loggeo
-      */}
+    e.preventDefault();
+
     try {
       const res = await api.login(email, password);
 
+      //localStorage.setItem("usuario", JSON.stringify(res.user || res.usuario));
       localStorage.setItem("usuario", JSON.stringify(res.user || res.usuario));
 
-      if (res.success == 1 || res.success === true) {
-        alert(res.message);
+      if (res.success === 1 || res.success === true) {
+        //alert(res.message); //Muestra una alarta tipo popout que dice datos correctos lo que fastidia jeje
         navigate("/dashboard");
-
-        {/*De fallar la auth, el sistema arroja un error que nos dice cual es el problema y se cierra */}
       } else {
         alert(res.message);
       }
@@ -38,8 +34,8 @@ export default function Ingreso() {
     }
   };
 
-  /*Aqui se genera el return de la funcion en donde se tiene la estructura basica de html y css para darle una jerarquia a los elementos
-   */
+  //Aqui se genera el return de la funcion en donde se tiene la estructura basica de html y css para darle una jerarquia a los elementos
+
   return (
     <div className="fondo-sesion">
       <h1 className="titulo">Inicio de sesión</h1>
@@ -72,7 +68,7 @@ export default function Ingreso() {
             <p className="olvido">
               <Link to="/Olvido">¿Olvido su contraseña?</Link>
             </p>
-              {/*El boton realiza la accion de mandar los datos a la constante handle y esta a su vez a la api y la api a la base */}
+            {/*El boton realiza la accion de mandar los datos a la constante handle y esta a su vez a la api y la api a la base */}
             <button type="button" onClick={handleLogin}>
               Aceptar
             </button>

@@ -20,9 +20,10 @@ export default function OlvidoContrasena() {
 
   return (
     <div className="general">
+      <h1 className="titulo">Recuperar contraseña</h1>
+
       <div className="formulario_olvido">
-        <h2>Recuperar contraseña</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
           <input
             type="email"
             placeholder="Ingrese su correo"
@@ -33,17 +34,19 @@ export default function OlvidoContrasena() {
         </form>
       </div>
 
-      <div className="mensaje">
-        <p>{mensaje}</p>
-        {link && (
-          <div className="link-box">
-            <p></p>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              Abrir enlace
-            </a>
-          </div>
-        )}
-      </div>
+      {mensaje && (
+        <div className="message-response">
+          <p>{mensaje}</p>
+
+          {link && (
+            <div className="link-box">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                Ver enlace generado
+              </a>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -30,8 +30,8 @@ export default function Dashboard() {
 
   return (
     <DashboardLayout>
-      <h1>PANEL PRINCIPAL</h1>
-      <p>Bienvenido al panel principal, desde aqui podras realizar todo lo que necesites</p>
+      <h1 className="titulo">PANEL PRINCIPAL</h1>
+      <p className="bienvenida">Bienvenido al panel principal, desde aqui podras realizar todo lo que necesites</p>
 
       <div className="cards">
         <div className="card">Tus Anuncios</div>

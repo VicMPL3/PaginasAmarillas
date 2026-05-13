@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../api/api";
+import "../styles/General.css";
 
 export default function ResetPassword() {
   const params = new URLSearchParams(window.location.search);
@@ -16,20 +17,25 @@ export default function ResetPassword() {
 
   return (
     <div className="general">
+     
+      <h1 className="titulo">Nueva contraseña</h1>
+      
       <div className="formulario_olvido">
-        <h2>Nueva contraseña</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
           <input
             type="password"
-            placeholder="Nueva contraseña"
+            placeholder="Introduce tu nueva contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
+            className="input-password"
           />
           <button type="submit">Cambiar</button>
         </form>
-      </div>
 
-      <p>{mensaje}</p>
+      </div>
+  
+      {mensaje && <p className="message-response">{mensaje}</p>}
     </div>
   );
 }
