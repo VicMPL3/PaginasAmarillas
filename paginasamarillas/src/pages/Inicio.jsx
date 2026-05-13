@@ -30,7 +30,7 @@ const Inicio = () => {
         <p>No hay anuncios disponibles por ahora.</p>
       ) : (
         <div className="grid-anuncios">
-          {anuncios.slice(0, 7).map(
+          {anuncios.slice(0, 8).map(
             (
               anuncio, // .slice limita a los primeros 6 elementos
             ) => (
